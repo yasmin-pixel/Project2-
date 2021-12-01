@@ -26,9 +26,7 @@ const Header = () => {
           </nav>
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
-              <Heading as="h2" size="3xl" isTruncated>
-                (3xl) In love with React & Next
-              </Heading>
+              <h1 class="display-3">Whats on Tasty Tv </h1>
             </div>
           </div>
         </div>
