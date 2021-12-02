@@ -2,9 +2,11 @@ import axios from "axios";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./Header";
-import ListMovies from "./ListMovies";
+//import ListMovies from "./ListMovies";
 import FavList from "./FavList";
 import MovieList from "./MovieList";
+import { Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import { useState, useEffect } from "react";
 
@@ -26,33 +28,27 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <div class="container-fluid">
-        <div className="App">
-          <Routes>
-            <Route
-              exact
-              path="/"
-              element={
-                <MovieList
-                  movies={movies}
-                  favourites={favourites}
-                  setMovies={setMovies}
-                  setFavourites={setFavourites}
-                />
-              }
-            ></Route>
-            <Route
-              path="/favourite"
-              element={
-                <FavList
-                  favourites={favourites}
-                  setFavourites={setFavourites}
-                />
-              }
-            ></Route>
-          </Routes>
-        </div>
-      </div>
+
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <MovieList
+              movies={movies}
+              favourites={favourites}
+              setMovies={setMovies}
+              setFavourites={setFavourites}
+            />
+          }
+        ></Route>
+        <Route
+          path="/favourite"
+          element={
+            <FavList favourites={favourites} setFavourites={setFavourites} />
+          }
+        ></Route>
+      </Routes>
     </BrowserRouter>
   );
 }
