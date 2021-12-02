@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# List technologies used
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    > JavaScript
+    > CSS
+    >React
+    >Bootstrap
+    >Axios
 
-## Available Scripts
+    # Document your planning and tell a story about your development process and problem-solving strategy
+    ##User stories
 
-In the project directory, you can run:
+For this project, I started off with a wireFrame that outlined where the different components will go. I designed my web brower to be simple with buttons allocated to diffrent jobs.
 
-### `npm start`
+# User Stories
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+• As a user I want to be able to add a new items from the movie list provided. So that I know it saved and I don’t have to search for the movie again.
+• As a user I want to take a look at what I have saved in my favourite list.
+• As a user I want to be able to Edit a name of a movie.
+• As a user I want to be able to mark a movie as watched so that I know that I have watched that movie.
+• As a user I want to remove an item form the favourite list.
+• As a user I want to remove all watched movies form my list. So that I can remove all the movies at once.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    # Document your planning and tell a story about your development process and problem-solving strategy
 
-### `npm test`
+I started to think about the diffrent types components that I needed and what I should call them.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Header.js
+> ListMovies.js
+> MovieList.js
+> FavList.js
+> App.js
+> Then using the URL provided I retrieved the data from the API.
 
-### `npm run build`
+I had to install axios in order to get the information I needed for my web brosw
+<const [favourites, setFavourites] = useState([]);>
+I created states which holds the information of the movies.
+Then started to use these states and setStates to make diffrent functions.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+First function was to add on a item.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<const addToFavourites = (event) => {
+const id = parseInt(event.target.id);
+const foundMovie = movies.find((movie) => movie.id === id);
+setFavourites([...favourites, foundMovie]);
+};>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Then used a condition for which bascally state when an onClick happens and the item is true add it on to the favourite list if nothing happens. I used a bang to swap the condition.
+Then used a condition for which bascally state when an onClick happens and the item is true add it on to the favourite list if not nothing happens. I used a bang to swap the condition.
 
-### `npm run eject`
+{!isFavourite && (
+<button id={id} className="btn btn-dark" onClick={handleAddToFav}>
+Add to favorite
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+          className="btn btn-dark"
+          onClick={handleFavouritesClick}
+        >
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I followed the same format for the rest of the conponents.
+I followed the similar format for the rest of the conponents and built my web browers up one component at a time.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+what I struggled on:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Edit part of the project I found extermly hard and I struggled to get the component to work. I reserched alot and even tried to do simliar method as what I did for watch/watched but did not work.
