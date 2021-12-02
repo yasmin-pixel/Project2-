@@ -19,7 +19,7 @@ const Header = () => {
             <div className="nav-links">
               <Link to="/favourite">
                 <button type="button" class="btn btn-secondary">
-                  Favourite
+                  Favourite list
                 </button>
               </Link>
             </div>
