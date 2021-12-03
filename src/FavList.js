@@ -35,7 +35,11 @@ const FavList = ({ movies, favourites, setFavourites }) => {
           );
         })}
 
-      <button className="btn btn-dark" onClick={removeAll}>
+      <button
+        className="btn btn-dark"
+        style={{ marginLeft: "35rem" }}
+        onClick={removeAll}
+      >
         Remove all
       </button>
     </div>
