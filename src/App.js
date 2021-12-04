@@ -2,12 +2,9 @@ import axios from "axios";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./Header";
-
 import FavList from "./FavList";
 import MovieList from "./MovieList";
-
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import { useState, useEffect } from "react";
 
 function App() {

@@ -8,9 +8,7 @@ function ListMovies({
   handleAddToFav,
   isFavourite,
   handleFavouritesClick,
-  handleEditChange,
   movies,
-  setMovies,
 }) {
   const [isWatched, setWatched] = useState(watched);
   const watchMovie = () => {
@@ -23,14 +21,9 @@ function ListMovies({
     setEditName(editName);
   };
   const handleClick = (event) => {
-    // find the object inside the movie array
     const arrayMovie = event.target.name;
     const foundMovie = movies.find((movie) => movie.arrayMovie === arrayMovie);
-    setEditName(...editName, foundMovie);
-
     console.log(arrayMovie);
-    // using the object update the name using editName
-    // save object to movie array using
   };
 
   return (
