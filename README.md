@@ -60,3 +60,5 @@ what I struggled on:
 
 Edit part of the project I found extermly hard and I struggled to get the component to work. I reserched alot and even tried to do simliar method as what I did for watch/watched but did not work.
 I also struggled with Bootstrap since, this was a new libary that I have not used quite offten.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a0b690de-339c-4f1c-9659-957c0ddc6f49/deploy-status)](https://app.netlify.com/sites/xenodochial-pasteur-30fa03/deploys)
